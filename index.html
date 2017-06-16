@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Dashboard</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Fontawesome core CSS -->
+    <link href="assets/simple-line-icons/simple-line-icons.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--Slide Show Css -->
+    <!-- <link href="assets/ItemSlider/css/main-style.css" rel="stylesheet" /> -->
+    <!-- custom CSS here -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/css/tinyTips.css" />
+
+  <script src="./assets/js/jquery.min.js"></script>
+
+</head>
+<body >
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" style="margin-right:30px"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                <ul class="nav navbar-nav ">
+					<!-- <li><a href="#"></a></li> -->
+          <li style="padding-top:18px">  <img src="assets/img/plus.png" style="margin-right:28px;cursor:pointer" onclick="addCase()"></li>
+          					<li class="dropdown" >
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="    padding-bottom: 25px;    padding-top: 25px;"></a>
+                                  <ul class="dropdown-menu">
+
+
+                                  </ul>
+                    </li>
+
+
+                </ul>
+                <form class="navbar-form " role="search" style="float:right">
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter Here ..." class="form-control" id="casefield">
+                    </div>
+                    &nbsp;
+
+					<!-- <img src="assets/img/plus.png" style="margin-left:28px"> -->
+					<img src="assets/img/setting.png" style="margin-left:28px">
+					<img src="assets/img/support.png" style="margin-left:28px">
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+    <div class="container1 co-md-12" style="padding:0 40px;">
+        <div class="row">
+            <div class="col-md-7_1" >
+                 <div class="well well-lg offer-box text-center">
+
+
+                   <!-- <span class="glyphicon glyphicon-cog"></span>                 -->
+							<div class="tabbable-line">
+                                        <ul class="nav nav-tabs ">
+                                            <li class="active col-md-4" style="width:33.33%">
+                                                <a href="#tab_15_1" data-toggle="tab"> <i class="icon-briefcase" style="padding-right:8px"></i><strong>Case</strong> </a>
+                                            </li>
+                                            <li class="col-md-4" style="width:33.33%">
+                                                <a href="#tab_15_2" data-toggle="tab"> <i class="icon-notebook" style="padding-right:8px"></i><strong>Notes</strong></a>
+                                            </li>
+                                            <li class="col-md-4" style="width:33.33%">
+                                                <a href="#tab_15_3" data-toggle="tab"> <i class="icon-share-alt" style="padding-right:8px"></i><strong>Export</strong></a>
+                                            </li>
+                                        </ul>
+							</div>
+                                        <div class="tab-content" style="background-color:white;height:300px">
+                                            <div class="tab-pane active" id="tab_15_1" style="padding:0 30px 30px 30px;text-align:left">
+                                               <div style="width:33.333333%;float:left;height:140px;border:solid 1px #d6d1d1;border-top:none;border-left:none;padding-left:26px">
+
+														<br><h4 id="case_name">Justin Seitz</h4><h5>Created</h5><h5 id="case_created_date" style="width:74%;line-height: 22px;">2017-03-17 10:12:56</h5>
+
+											   </div>
+                      <div style="width:33.333333%;float:left;height:140px;border:solid 1px #d6d1d1;border-top:none;border-left:none;text-align:center">
+												<br><h5>Pages Viewed</h5><h1 class="Gradient" >
+													   <span class="G1" aria-hidden="true" id='pages_viewed1' style="color:#2479B1;padding-left:26%"></span>
+
+												</h1>
+											   </div>
+                                               <div style="width:33.333333%;float:left;height:140px;border:solid 1px #d6d1d1;border-top:none;border-left:none;border-right:none;text-align:center">
+												<br><h5>Searches Performed</h5><h1 class="Gradient" >
+													<span class="G1" aria-hidden="true" style="color:#2479B1;padding-left:26%">2</span>
+
+												</h1>
+											   </div>
+                                               <div style="width:33.333333%;float:left;height:140px;border:solid 1px #d6d1d1;border-top:none;border-left:none;border-bottom:none;text-align:center">
+												<br><h5>Photo Tagged</h5><h1 class="Gradient" style="font-size:60px">
+													<span class="G1" aria-hidden="true" id="photo_tagged1" style="color:#2479B1;padding-left:26%"></span>
+
+												</h1>
+											   </div>
+                                               <div style="width:33.333333%;float:left;height:140px;border:solid 1px #d6d1d1;border-top:none;border-left:none;border-bottom:none;text-align:center">
+												<br><h5>Selector Hits</h5><h1 class="Gradient" style="font-size:60px">
+													   <span class="G1" aria-hidden="true" id="selector_hits1" style="color:#2479B1;padding-left:26%"></span>
+												</h1>
+											   </div>
+                                               <div style="width:33.333333%;float:left;height:140px;border:solid 1px #d6d1d1;border:none;text-align:center">
+												<br><h5>Note Count</h5><h1 class="Gradient" style="font-size:60px">
+													   <span class="G1" aria-hidden="true" style="color:#2479B1;padding-left:26%">0</span>
+
+												</h1>
+											   </div>
+                                            </div>
+                                            <div class="tab-pane" id="tab_15_2">
+
+                                            </div>
+                                            <div class="tab-pane" id="tab_15_3">
+
+                                            </div>
+                                        <!-- </div> -->
+                                    </div>
+
+                </div>
+
+                <br />
+            </div>
+            <!-- /.col -->
+            <div class="col-md-1_1 text-center" >
+			</div>
+            <div class="col-md-4_1 text-center" >
+                                 <div class="well well-lg offer-box text-center">
+
+
+                   <!-- <span class="glyphicon glyphicon-cog"></span>                 -->
+							<div class="tabbable-line">
+                                        <ul class="nav nav-tabs ">
+                                            <li class="active col-md-4" style="width:50%">
+                                                <a href="#tab_15_11" data-toggle="tab"> <i class="icon-cursor-move" style="padding-right:8px"></i><strong>Selectors</strong> </a>
+                                            </li>
+                                            <li class="col-md-4" style="width:50%">
+                                                <a href="#tab_15_21" data-toggle="tab"> <i class="icon-tag" style="padding-right:8px"></i><strong>Tags</strong></a>
+                                            </li>
+
+                                        </ul>
+							</div>
+
+							<div class="tab-content" style="background-color:white;height:300px">
+								<div class="tab-pane active" id="tab_15_11">
+									<div class="alert alert-success alert-dismissable" style="font-size:14px;font-weight:300;color:#999;    background-color: rgb(255,255,226) !important; color:gray;border-left:none;border-top:none;border-right:none">
+										<button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+										<span style="position:absolute;left:20px;color:#999"><i class="fa fa-plus"></i></span>
+										<div style="text-align:left;display:inline-block;width:92%;padding-left:20px">Adding a new selector will scan all case files for the new selector. This may take a minute or two.</div>
+
+									</div>
+									<div style="padding:10px;border-bottom:solid 1px #d6d1d1">
+										<button type="button" class="btn btn-success"><i class="fa fa-plus" style="padding-right:5px"></i>ADD</button>
+										<button type="button" class="btn btn-warning"><i class="fa fa-plus" style="padding-right:5px"></i>BULK ADD</button>
+										<button type="button" class="btn btn-primary"><i class="icon-share-alt" style="padding-right:5px"></i>EXPORT(.csv)</button>
+								   </div>
+								   <div class="selector_tab">
+								    <span id="selector">SELECTOR</span>
+								    <span id="count">COUNT</span>
+								   </div>
+                   <div id="selector_table">
+
+                 </div>
+								</div>
+								<div class="tab-pane" id="tab_15_21">
+
+								</div>
+
+							<!-- </div> -->
+							</div>
+
+                </div>
+                </div>
+
+            </div>
+            <!-- /.col -->
+
+        </div>
+
+        <!-- /.row -->
+
+		<div class="row" style="padding-left:40px;padding-right:40px">
+			<div class="col-md-12" >
+                 <div class="well well-lg offer-box text-center">
+
+
+                   <!-- <span class="glyphicon glyphicon-cog"></span>                 -->
+							<div class="tabbable-line">
+                                        <ul class="nav nav-tabs ">
+                                            <li class="active " style="width:20%">
+                                                <a href="#tab_history" data-toggle="tab"> <i class="icon-clock" style="padding-right:8px"></i><strong>History</strong> </a>
+                                            </li>
+                                            <li class="" style="width:20%">
+                                                <a href="#tab_notes" data-toggle="tab"> <i class="icon-notebook" style="padding-right:8px"></i><strong>Notes</strong></a>
+                                            </li>
+                                            <li class="" style="width:20%">
+                                                <a href="#tab_search" data-toggle="tab"> <i class="icon-magnifier" style="padding-right:8px"></i><strong>Searches</strong></a>
+                                            </li>
+											<li class="" style="width:20%">
+                                                <a href="#tab_photo" data-toggle="tab"> <i class="icon-picture" style="padding-right:8px"></i><strong>Photos</strong></a>
+                                            </li>
+											<li class="" style="width:20%">
+                                                <a href="#tab_data" data-toggle="tab"> <i class="icon-bar-chart" style="padding-right:8px"></i><strong>Data</strong></a>
+                                            </li>
+                                        </ul>
+							</div>
+                                        <div class="tab-content" style="background-color:white;height:600px">
+                                            <div class="tab-pane active" id="tab_history">
+                                               <div class="alert alert-success alert-dismissable" style="font-size:14px;font-weight:300;color:#999;    background-color: rgb(255,255,226) !important; color:gray;border-left:none;border-top:none;border-right:none">
+													<button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+													<span style="position:absolute;left:20px;color:#999"><i class="icon-clock"></i></span>
+													<div style="text-align:left;display:inline-block;width:92%;padding-left:7px">History of all pages you have viewed for this case are listed here from newest to oldest.</div>
+
+												</div>
+												<div style="text-align:left;padding:8px;border-bottom:solid 1px #d6d1d1">
+
+													 <!-- <input type="checkbox" name="history[]" id="selectall" /> -->
+													 <span class="ckbox">
+																			<input type="checkbox" id="checkbox0" >
+																		<label for="checkbox0"></label>
+																	</span>
+													 <span class="showing">Showing 1 to 2 of notes</span>
+													 <span>SORT BY
+														 <select class="custom-select">
+																  <option>Date Visited</option>
+																  <option>Ketchup</option>
+																  <option>Relish</option>
+														</select>
+
+													</span>
+													<span class="col-xs-3" style="float:right;right:20px"><input type="text" class="form-control" name="search" placeholder="Search" style="height:30px;border-radius:3px"></span>
+												</div>
+												<div style="text-align:left">
+														<table class="table table-filter">
+														<tbody>
+															<tr data-status="pagado">
+																<td>
+																	<div class="ckbox">
+																			<input type="checkbox" id="checkbox1" class="case">
+																		<label for="checkbox1"></label>
+																	</div>
+																</td>
+
+																<td>
+																	<div class="media">
+																		<a href="detail.html" class="pull-left imgTip">
+																			<img src="assets/img/img2.png" class="media-photo">
+																		</a>
+																		<div class="media-body">
+																			<h4 class="title">
+																				Justin Seitz - Search in Google
+																			</h4>
+																			<a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=%D0%B5%D0%B2%D1%80%D0%BE%D1%81" class="link">https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=%D0%B5%D0%B2%D1%80%D0%BE%D1%81</a><br>
+																			<span id="date">2017-03-17</span><span id="name">jms_dot_py,Justin Seltz</span>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr data-status="pendiente">
+																<td>
+																	<div class="ckbox">
+																			<input type="checkbox" id="checkbox3" class="case">
+																		<label for="checkbox3"></label>
+																	</div>
+																</td>
+
+																<td>
+																	<div class="media">
+																		<a href="detail.html" class="pull-left">
+																			<img src="assets/img/img4.png" class="media-photo" id="imgTip1">
+																		</a>
+																		<div class="media-body">
+																			<h4 class="title">
+																				Amazon.co.uk: Justin Seitz: Books, Biogs, Audiobooks
+																			</h4>
+																			<a href="https://www.amazon.co.uk/Justin-Seitz/e/B0045B0QJK" class="link">https://www.amazon.co.uk/Justin-Seitz/e/B0045B0QJK</a><br>
+																			<span id="date">2017-03-17</span><span id="name">jms_dot_py,Justin Seltz</span>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr data-status="cancelado">
+																<td>
+																	<div class="ckbox">
+																			<input type="checkbox" id="checkbox2" class="case">
+																		<label for="checkbox2"></label>
+																	</div>
+																</td>
+
+																<td>
+																	<div class="media">
+																		<a href="detail.html" class="pull-left ">
+																			<img src="assets/img/img2.png" class="media-photo" id="imgTip2">
+																		</a>
+																		<div class="media-body">
+																			<h4 class="title">
+																				Justin Seitz - Search in Google
+																			</h4>
+																			<a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=%D0%B5%D0%B2%D1%80%D0%BE%D1%81" class="link">https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=%D0%B5%D0%B2%D1%80%D0%BE%D1%81</a><br>
+																			<span id="date">2017-03-17</span><span id="name">jms_dot_py,Justin Seltz</span>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr data-status="pendiente">
+																<td>
+																	<div class="ckbox">
+																			<input type="checkbox" id="checkbox4" class="case">
+																		<label for="checkbox4"></label>
+																	</div>
+																</td>
+
+																<td>
+																	<div class="media">
+																		<a href="detail.html" class="pull-left imgTip3">
+																			<img src="assets/img/img4.png" class="media-photo">
+																		</a>
+																		<div class="media-body">
+																			<h4 class="title">
+																				Amazon.co.uk: Justin Seitz: Books, Biogs, Audiobooks
+																			</h4>
+																			<a href="https://www.amazon.co.uk/Justin-Seitz/e/B0045B0QJK" class="link">https://www.amazon.co.uk/Justin-Seitz/e/B0045B0QJK</a><br>
+																			<span id="date">2017-03-17</span><span id="name">jms_dot_py,Justin Seltz</span>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+
+														</tbody>
+													</table>
+												</div>
+                                            </div>
+                                            <div class="tab-pane" id="tab_notes">
+                                               	<div style="text-align:left;padding:8px;border-bottom:solid 1px #d6d1d1;padding-bottom: 13px;padding-top: 11px;">
+
+													 <!-- <input type="checkbox" name="history[]" id="selectall" /> -->
+													<a href="#listview" data-toggle="tab"> <span id="notes_listview"><i class="fa fa-list"></i></span></a>
+													<a href="#gridview" data-toggle="tab">  <span id="notes_gridview">	<i class="fa fa-th-large"></i></span></a>
+													 <span class="showing">Showing 1 to 2 of notes</span>
+													 <!-- <span>SORT BY -->
+														 <!-- <select class="custom-select"> -->
+																  <!-- <option>Date Visited</option> -->
+																  <!-- <option>Ketchup</option> -->
+																  <!-- <option>Relish</option> -->
+														<!-- </select> -->
+
+													<!-- </span> -->
+													<span class="col-xs-3 search" style="float:right"><input type="text" class="form-control" name="search" placeholder="Search" style="height:30px;border-radius:3px"></span>
+												</div>
+												<div class="tab-content">
+													<div class="tab-pane active" id="listview">
+														<div class="item">
+															<a href="javascript:void(0);">
+																<img src="assets/img/notesimg2.png" />
+															</a>
+															<div class="details">
+																<h4><strong>Big picture of Mark’s head.</strong></h4>
+																<h5>2017-03-27</h5>
+																<a href="https://www.facebook.com/photo.php?fbid=10102210419817761&set=ecnf.4&type=3&theater" class="link"><p>https://www.facebook.com/photo.php?fbid=10102210419817761&set=ecnf.4&type=3&theater</p></a>
+																<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+																<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+																<div><p id="line"></p><div id="tool">
+																	<span id='eye'><i class="fa fa-eye"></i></span>
+																     <span id="set"><i class="fa fa-gear"></i></span>
+																	 <span id="remove"><i class="fa fa-times"></i></span>
+																	 </div>
+     															</div>
+															</div>
+														</div>
+														<div class="item">
+															<a href="javascript:void(0);">
+																<img src="assets/img/notesimg1.png" />
+															</a>
+															<div class="details">
+																<h4><strong>Twitter of Donald Trump.</strong></h4>
+																<h5>2017-03-27</h5>
+																<a href="https://twitter.com/realdonaldtrump" class="link"><p>https://twitter.com/realdonaldtrump</p></a>
+																<p>A 2016 medical report issued by his doctor, Harold Bornstein M.D., showed that Trump's blood pressure, liver and thyroid function were in normal ranges.</p>
+																<p>Trump says that he has never smoked cigarettes or consumed other drugs, including marijuana. He also drinks no alcohol, a decision arising in part from watching his older brother. </p>
+																<div><p id="line"></p><div id="tool">
+																	<span id='eye'><i class="fa fa-eye"></i></span>
+																     <span id="set"><i class="fa fa-gear"></i></span>
+																	 <span id="remove"><i class="fa fa-times"></i></span>
+																	 </div>
+     															</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane" id="gridview">
+														<div class="griditem">
+															<a href="javascript:void(0);">
+																<img src="assets/img/notesimg2.png" />
+															</a>
+															<div class="details">
+																<h4><strong>Big picture of Mark’s head.</strong></h4>
+																<h5>2017-03-27</h5>
+																<a href="https://www.facebook.com/photo.php?fbid=10102210419817761&set=ecnf.4&type=3&theater" class="link"><p>https://www.facebook.com/photo.php?fbid=10102210419817761&set=ecnf.4&type=3&theater</p></a>
+																<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+																<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+																<div>
+																	<!-- <p id="line"></p> -->
+																	<div id="tool1">
+																	<span id='eye'><i class="fa fa-eye"></i></span>
+																     <span id="set"><i class="fa fa-gear"></i></span>
+																	 <span id="remove"><i class="fa fa-times"></i></span>
+																	 </div>
+     															</div>
+															</div>
+														</div>
+
+														<div class="griditem">
+															<a href="javascript:void(0);">
+																<img src="assets/img/notesimg1.png" />
+															</a>
+															<div class="details">
+																<h4><strong>Twitter of Donald Trump.</strong></h4>
+																<h5>2017-03-27</h5>
+																<a href="https://twitter.com/realdonaldtrump" class="link"><p>https://twitter.com/realdonaldtrump</p></a>
+																<p>A 2016 medical report issued by his doctor, Harold Bornstein M.D., showed that Trump's blood pressure, liver and thyroid function were in normal ranges.</p>
+																<p>Trump says that he has never smoked cigarettes or consumed other drugs, including marijuana. He also drinks no alcohol, a decision arising in part from watching his older brother. </p>
+																<div>
+																	<!-- <p id="line"></p> -->
+																	<div id="tool1">
+																		<span id='eye'><i class="fa fa-eye"></i></span>
+																		 <span id="set"><i class="fa fa-gear"></i></span>
+																		 <span id="remove"><i class="fa fa-times"></i></span>
+																	</div>
+     															</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+                                            </div>
+                                            <div class="tab-pane" id="tab_search">
+                                                search
+                                            </div>
+											<div class="tab-pane" id="tab_photo">
+                                                <div style="text-align:left;padding:8px;border-bottom:solid 1px #d6d1d1;padding-bottom: 13px;padding-top: 11px;">
+
+													 <!-- <input type="checkbox" name="history[]" id="selectall" /> -->
+													<a href="#listview1" data-toggle="tab"> <span id="notes_listview1"><i class="fa fa-list"></i></span></a>
+													<a href="#gridview1" data-toggle="tab">  <span id="notes_gridview1">	<i class="fa fa-th-large"></i></span></a>
+													 <span class="showing">Showing 1 to 2 of notes</span>
+													  <span>SORT BY
+														 <select class="custom-select">
+																  <option>Date Visited</option>
+																   <option>Ketchup</option>
+																   <option>Relish</option>
+														 </select>
+
+													 </span>
+													<span class="col-xs-3 search" style="float:right"><input type="text" class="form-control" name="search" placeholder="Search" style="height:30px;border-radius:3px"></span>
+												</div>
+												<div class="tab-content">
+													<div class="tab-pane active" id="listview1" style="padding-top:20px">
+														<div class="photo1">
+															<img src="assets/img/photo1.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo1">
+															<img src="assets/img/photo2.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo1">
+															<img src="assets/img/photo3.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo1">
+															<img src="assets/img/photo4.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo1" >
+															<img src="assets/img/photo5.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo1">
+															<img src="assets/img/photo6.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane" id="gridview1" style="padding-top:20px">
+														<div class="photo">
+															<img src="assets/img/photo1.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo">
+															<img src="assets/img/photo2.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo">
+															<img src="assets/img/photo3.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo">
+															<img src="assets/img/photo4.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo" >
+															<img src="assets/img/photo5.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+														<div class="photo">
+															<img src="assets/img/photo6.png">
+															<div id="photo_content">
+																<div id="photo_date">
+																	<h4>2017-03-17</h4>
+																	<h5>10:34:56</h5>
+																</div>
+
+																	<span id='eye1'><i class="fa fa-eye"></i></span>
+																	<span id="set1"><i class="fa fa-gear"></i></span>
+																	<span id="remove1"><i class="fa fa-times"></i></span>
+
+															</div>
+														</div>
+													</div>
+												</div>
+                                            </div>
+											<div class="tab-pane" id="tab_data">
+                                                data
+                                            </div>
+                                        <!-- </div> -->
+                                    </div>
+
+                </div>
+
+                <br />
+            </div>
+		</div>
+        <!-- /.row -->    </div>
+    <!-- /.container -->
+    <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="form-horizontal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Delete</h4>
+                    </div>
+                    <div class="modal-body">
+                      Are you sure you wish to delete selector (<span id="select_name_modal"></span>)?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-primary" onclick="realy_selector_delete()">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Core JavaScript file  -->
+    <script src="./assets/js/view.js" ></script>
+    <script src="db.js"></script>
+    <!-- <script src="assets/js/jquery-1.10.2.js"></script> -->
+    <!-- <script src="assets/js/jquery.js"></script> -->
+    <!--bootstrap JavaScript file  -->
+
+  <!-- <script src="./assets/js/bootstrap.min.js"></script> -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--Slider JavaScript file  -->
+
+<script type="text/javascript" src="assets/js/jquery.tinyTips.js"></script>
+<script src="./assets/js/render.js" ></script>
+</div>
+		</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Dashboard</title>
+		<!-- Bootstrap core CSS -->
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<!-- Fontawesome core CSS -->
+		<link href="assets/simple-line-icons/simple-line-icons.css" rel="stylesheet" />
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+		<!--GOOGLE FONT -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<!--Slide Show Css -->
+		<!-- <link href="assets/ItemSlider/css/main-style.css" rel="stylesheet" /> -->
+		<!-- custom CSS here -->
+		<link href="assets/css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/css/tinyTips.css" />
+		<style>
+		 #name{
+			background-color: #428bca;
+			color: white;
+			font-size: 15px;
+			border-radius: 2px;
+			font-weight: normal;
+			padding-left: 5px;
+			padding-right: 5px;
+
+			padding-bottom: 3px;
+		 }
+		</style>
+
+
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+						<ul class="nav navbar-nav ">
+							<!-- <li><a href="#"></a></li> -->
+							<li class="dropdown" >
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="    padding-bottom: 25px;    padding-top: 25px;">My Cases<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#"><strong>Call: </strong>+09-456-567-890</a></li>
+									<li><a href="#"><strong>Mail: </strong>info@yourdomain.com</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><strong>Address: </strong>
+										<div>
+											234, New york Street,<br />
+											Just Location, USA
+										</div>
+									</a></li>
+								</ul>
+							</li>
+
+
+						</ul>
+						<form class="navbar-form " role="search" style="float:right">
+							<div class="form-group">
+								<input type="text" placeholder="Enter Keyword Here ..." class="form-control">
+							</div>
+							&nbsp;
+
+							<img src="assets/img/plus.png" style="margin-left:28px">
+							<img src="assets/img/setting.png" style="margin-left:28px">
+							<img src="assets/img/support.png" style="margin-left:28px">
+						</form>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+
+			<div class="row" style="padding:0 52px">
+				<div class="col-md-8" style="transition: all .2s ease-in-out;" id="detail_left">
+					<div class="well well-lg offer-box text-center" style="padding:8px 10px;padding-bottom:0">
+
+							<button type="button" class="btn btn-primary" style="float:left" onclick="prev()"><i class="fa fa-angle-left" style="padding-right:5px"></i>PREV</button>
+
+							<button type="button" class="btn btn-primary" style="float:right" onclick="next()">NEXT<i class="fa fa-angle-right" style="padding-left:5px"></i></button>
+							<div>Justin Seitz</div><div style="color:#c3c2c2;font-size:12px">(Page preview)</div>
+
+					</div>
+					<div  class="tab-content" style="background-color:white;height:557px;transition: all .2s ease-in-out;">
+							<div class="tab-pane active" id="tab_15_1" >
+							  <div style="border-bottom:solid 1px #d6d1d1">
+								<div style="padding:15px 0;margin-left:20px;text-align:left;border-bottom:solid 1px #d6d1d1;">
+									<font style="font-size:19px">Justin Seitz - Search in Google</font>
+
+																	<span id="star3" title="Delete"><i class="fa fa-trash-o"></i></span>
+																	 <span id="star2" title="Export"><i class="icon-share-alt"></i></span>
+																	 <span id="star1"><i class="fa fa-star"></i></span>
+																	 <span id='star'><i class="fa fa-plus"></i></span>
+								</div>
+								<div style="padding:10px 0;margin-left:20px;text-align:left">
+									<font style="color:#44aee3;font-size:10px">https://www.google.pl/search?q=Justin+Seitz&oq=Justin+Seitz&aqs=chrome..69i57j0l5.406j0j1&sourceid=chrome&ie=UTF-8</font>
+								</div>
+							  </div>
+							  <div style="margin:20px;border:solid 2px #d6d1d1;border-radius:2px;overflow-y:auto;height:395px;padding:15px">
+								<img src="assets/img/detailphoto1.png" style="width:100%">
+							  </div>
+							</div>
+							<div class="tab-pane" id="tab_15_2">
+								 <div style="border-bottom:solid 1px #d6d1d1">
+								<div style="padding:15px 0;margin-left:20px;text-align:left;border-bottom:solid 1px #d6d1d1;">
+									<font style="font-size:19px">Justin Seitz - Search in Google</font>
+
+																	<span id="star3" title="Delete"><i class="fa fa-trash-o"></i></span>
+																	 <span id="star2"><i class="icon-share-alt"></i></span>
+																	 <span id="star1"><i class="fa fa-star"></i></span>
+																	 <span id='star'><i class="fa fa-plus"></i></span>
+								</div>
+								<div style="padding:10px 0;margin-left:20px;text-align:left">
+									<font style="color:#44aee3;font-size:10px">https://www.google.pl/search?q=Justin+Seitz&oq=Justin+Seitz&aqs=chrome..69i57j0l5.406j0j1&sourceid=chrome&ie=UTF-8</font>
+								</div>
+							  </div>
+							  <div style="margin:20px;border:solid 2px #d6d1d1;border-radius:2px;overflow-y:auto;height:395px;padding:15px">
+								<img src="assets/img/img41.png" style="width:100%">
+							  </div>
+							</div>
+							<div class="tab-pane" id="tab_15_3">
+								 <div style="border-bottom:solid 1px #d6d1d1">
+								<div style="padding:15px 0;margin-left:20px;text-align:left;border-bottom:solid 1px #d6d1d1;">
+									<font style="font-size:19px">Justin Seitz - Search in Google</font>
+
+																	 <span id="star3" title="Delete"><i class="fa fa-trash-o"></i></span>
+																	 <span id="star2" title="Export"><i class="icon-share-alt"></i></span>
+																	 <span id="star1"><i class="fa fa-star"></i></span>
+																	 <span id='star'><i class="fa fa-plus"></i></span>
+								</div>
+								<div style="padding:10px 0;margin-left:20px;text-align:left">
+									<font style="color:#44aee3;font-size:10px">https://www.google.pl/search?q=Justin+Seitz&oq=Justin+Seitz&aqs=chrome..69i57j0l5.406j0j1&sourceid=chrome&ie=UTF-8</font>
+								</div>
+							  </div>
+							  <div style="margin:20px;border:solid 2px #d6d1d1;border-radius:2px;overflow-y:auto;height:395px;padding:15px">
+								<img src="assets/img/Image21.png" style="width:100%">
+							  </div>
+							</div>
+						 </div>
+					</div>
+
+
+				<!-- /.col -->
+
+				<div class="col-md-4 text-center" id="detail_right">
+					<div class=" col-md-12 col-sm-6 col-xs-6" id="right_left">
+						<div class="well well-lg offer-box text-center" style="text-align:left;padding:14px 0 0 12px;color:#44aee3">
+							<div><i class="fa fa-file-text-o"></i> Page Info</div>
+
+						</div>
+
+						<div class="thumbnail product-box" style="color:#999">
+
+							<div class="selector_row">
+									<span style="padding-right:81px">Date</span><span id="td">2017-03-27 10:08:10 </span>
+							</div>
+							<div class="selector_row">
+									<span style="padding-right:55px">Updated</span><span id="td">2017-03-27 10:09:10 </span>
+							</div>
+							<div class="selector_row">
+									<span style="padding-right:55px">Hash (SHA-256)</span><div >ed2456914e48c1e17b7bd922177291<br>ef8b7f53edf1b1f66b6fc1a076524b22f</div>
+							</div>
+							<div class="selector_row" style="border:none">
+									<span style="padding-right:55px;margin-bottom:10px">Selector Hits</span><div style="margin:7px 0"><span id="name">jms_dot_py,Justin Seltz</span></div>
+							</div>
+						</div>
+					</div>
+					<div class=" col-md-12 col-sm-6 col-xs-6" id="right_right">
+						<div class="well well-lg offer-box text-center" style="text-align:left;padding:14px 0 0 12px;color:#44aee3">
+							<div><i class="icon-graph"></i> Page Path</div>
+
+						</div>
+						<div class="thumbnail product-box">
+							<div style="padding-bottom:16px">
+								<div class="selector_row_1">
+									<span class="imgTip"><i class="fa fa-image"></i></span><span style="padding-right:55px">Google (Title)</span><div style="color:#44aee3">https://www.google.com/ </div>
+								</div>
+								<div class="selector_row_1">
+									<span class="imgTip"><i class="fa fa-image"></i></span><span style="padding-right:55px">Google (Title)</span><div style="color:#44aee3">https://www.google.com/ </div>
+								</div>
+								<div class="selector_row_1">
+									<span class="imgTip"><i class="fa fa-image"></i></span><span style="padding-right:55px">Google (Title)</span><div style="color:#44aee3">https://www.google.com/ </div>
+								</div>
+								<div class="selector_row_1">
+									<span class="imgTip"><i class="fa fa-image"></i></span><span style="padding-right:55px">Google (Title)</span><div style="color:#44aee3">https://www.google.com/ </div>
+								</div>
+<!--  -->
+
+
+								<div class="selector_row_1" style="border:none">
+									<span class="imgTip"><i class="fa fa-image"></i></span><span style="padding-right:55px">Google (Title)</span><div style="color:#44aee3">https://www.google.com/ </div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+
+	</body>
+	<script src="./assets/js/view.js" ></script>
+	<script src="./db.js"></script>
+	<script src="assets/js/jquery-1.10.2.js"></script>
+    <!--bootstrap JavaScript file  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--Slider JavaScript file  -->
+
+<script type="text/javascript" src="assets/js/jquery.tinyTips.js"></script>
+	<script>
+	db.each("SELECT * FROM lorem",function(err,row){
+		console.log(row);
+	});
+	var i=1;
+		function next(){
+			i++;
+			if(i>3){
+				i=3;
+				return;
+			}
+			$("#tab_15_"+(i-1)).removeClass("active");
+			$("#tab_15_"+i).addClass( "active" );
+
+		}
+		function prev(){
+			i--;
+			if(i<1){
+				i=1;
+				return;
+			}
+			$("#tab_15_"+(i+1)).removeClass("active");
+			$("#tab_15_"+i).addClass( "active" );
+
+		}
+		$('span.imgTip').tinyTips('dark', '<img src="assets/img/img41.png" style="width:275px"/>');
+	</script>
+
+</html>
