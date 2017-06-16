@@ -1,4 +1,4 @@
 # Electron
--Install.
-	$ npm install
-	$ npm start
+-Install.<br>
+	$ npm install<br>
+	$ npm start<br>
